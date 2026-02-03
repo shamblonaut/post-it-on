@@ -1,0 +1,29 @@
+{
+  "name": "post-it-on",
+  "version": "0.0.0",
+  "description": "Jot it down and Post it on!",
+  "homepage": "https://github.com/shamblonaut/post-it-on#readme",
+  "bugs": {
+    "url": "https://github.com/shamblonaut/post-it-on/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamblonaut/post-it-on.git"
+  },
+  "license": "MIT",
+  "author": "Shaheem Niyaz",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file-if-exists=.env server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "globals": "^17.3.0"
+  }
+}
