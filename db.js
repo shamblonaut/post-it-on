@@ -1,0 +1,18 @@
+export const posts = [
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+  { content: "Hello, World!" },
+];

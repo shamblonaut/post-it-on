@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post It On</title>
+    <link rel="icon" href="/logo.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include("partials/header") %>
+    <% if (locals.posts) { %>
+      <div class="board">
+        <% posts.map((post) => { %>
+          <%- include("partials/post", { post }) %>
+        <% }) %>
+      </div>
+    <% } %>
+  </body>
+</html>
