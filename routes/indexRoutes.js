@@ -1,9 +1,12 @@
 import { Router } from "express";
 
-import { getIndex } from "../controllers/indexController.js";
+import { getIndexPage } from "../controllers/indexController.js";
+import { getNewPage, postNewNote } from "../controllers/newController.js";
 
 const indexRouter = Router();
 
-indexRouter.get("/", getIndex);
+indexRouter.get("/", getIndexPage);
+indexRouter.get("/new", getNewPage);
+indexRouter.post("/new", postNewNote);
 
 export default indexRouter;

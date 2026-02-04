@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Post It On</title>
+    <title>New Post</title>
     <link rel="icon" href="/logo.svg" />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <%- include("partials/header", { showActions: true }) %>
-    <% if (locals.posts) { %>
-      <div class="board">
-        <% posts.map((post) => { %>
-          <%- include("partials/post", { post }) %>
-        <% }) %>
+    <%- include("partials/header") %>
+    <form method="post">
+      <div class="field">
+        <label for="note">Note:</label>
+        <textarea name="note" id="note" autofocus required></textarea>
       </div>
-    <% } %>
+      <button type="submit">Add Note</button>
+    </form>
   </body>
 </html>

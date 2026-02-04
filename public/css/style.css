@@ -6,10 +6,23 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100svh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
 .lockup {
+  text-decoration: none;
+  color: inherit;
+
   display: flex;
   gap: 0.75rem;
-  margin: 1rem;
 }
 
 .logo {
@@ -20,6 +33,18 @@
 .wordmark {
   font-family: "Delicious Handrawn", sans-serif;
   font-size: 2.5rem;
+}
+
+.add {
+  color: inherit;
+  text-decoration: none;
+
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #a7f432;
+
+  font-family: system-ui, sans-serif;
+  font-size: 1.25rem;
 }
 
 .board {
@@ -45,4 +70,31 @@
   font-family: "Delicious Handrawn", cursive;
 
   background-color: #ffeb3b;
+  box-shadow: 0 8px 4px -2px gray;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 20rem;
+  margin: 0 auto;
+  padding: 1rem;
+
+  border: 1px solid gray;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 4px gray;
+
+  font-family: system-ui, sans-serif;
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+form .field {
+  display: flex;
+  gap: 1rem;
 }
