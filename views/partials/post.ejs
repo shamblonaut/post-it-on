@@ -1,3 +1,5 @@
-<div class="post">
-  <p class="content"><%= post.note %></p>
+<div class="post" style="font-size: <%= calculateFontSize(post) %>px">
+  <% post.note.split("\n").map((line) => { %>
+    <p class="line"><%= line %></p>
+  <% }) %>
 </div>
