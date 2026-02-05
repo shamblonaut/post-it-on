@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
 
+:root {
+  --color-yellow: #fee63b;
+  --color-blue: #37d2d8;
+  --color-green: #d2de40;
+  --color-orange: #ffad64;
+  --color-red: #ef65a3;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +22,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem;
+  padding: 1rem;
+  background-color: var(--color-blue);
 }
 
 .lockup {
@@ -41,7 +50,7 @@ header {
 
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background-color: #a7f432;
+  background-color: var(--color-yellow);
 
   font-family: system-ui, sans-serif;
   font-size: 1.25rem;
@@ -71,8 +80,7 @@ header {
   font-size: 4rem;
   font-family: "Delicious Handrawn", cursive;
 
-  background-color: #ffeb3b;
-  box-shadow: 0 8px 4px -2px gray;
+  background-color: var(--color-yellow);
 }
 
 form {
