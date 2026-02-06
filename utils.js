@@ -1,6 +1,6 @@
-export function calculateFontSize(post) {
-  const lines = (post.note.match(/\n/g) || []).length + 1;
-  const tokens = post.note.split(/\s+/).filter(Boolean);
+export function calculateFontSize(note) {
+  const lines = (note.match(/\n/g) || []).length + 1;
+  const tokens = note.split(/\s+/).filter(Boolean);
   const longestTokenLength = Math.max(
     ...tokens.map((token) => token.length),
     1,
