@@ -65,6 +65,17 @@ header {
   margin: 2rem;
 }
 
+.empty-message {
+  font-family: "Delicious Handrawn", cursive;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 8rem;
+  max-width: 50vw;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .post {
   margin: 1rem;
   padding: 1rem;

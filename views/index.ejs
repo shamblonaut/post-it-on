@@ -11,9 +11,13 @@
     <%- include("partials/header", { showActions: true }) %>
     <% if (locals.posts) { %>
       <div class="board">
-        <% posts.map((post) => { %>
-          <%- include("partials/post", { post }) %>
-        <% }) %>
+        <% if (posts.length > 0) { %>
+          <% posts.map((post) => { %>
+            <%- include("partials/post", { post }) %>
+          <% }) %>
+        <% } else { %>
+          <p class="empty-message">Add a note to get started!</p>
+        <% } %>
       </div>
     <% } %>
   </body>
