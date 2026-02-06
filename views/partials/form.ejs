@@ -2,11 +2,21 @@
   <div class="field note-field">
     <label for="note">New Note</label>
     <textarea
+      class="note-input"
       name="note"
       id="note"
       autofocus
       required
     ></textarea>
   </div>
-  <button type="submit">Add Note</button>
+  <div class="field color-field">
+    <label>Color: </label>
+    <input class="color-radio color-yellow" type="radio" name="color" value="yellow" autocomplete="off" checked />
+    <input class="color-radio color-blue" type="radio" name="color" value="blue" autocomplete="off" />
+    <input class="color-radio color-green" type="radio" name="color" value="green" autocomplete="off" />
+    <input class="color-radio color-orange" type="radio" name="color" value="orange" autocomplete="off" />
+    <input class="color-radio color-red" type="radio" name="color" value="red" autocomplete="off" />
+  </div>
+  <button type="submit" class="note-submit">Add Note</button>
 </form>
+<script src="/js/form.js"></script>

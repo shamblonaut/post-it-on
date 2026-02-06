@@ -3,9 +3,9 @@
 :root {
   --color-yellow: #fee63b;
   --color-blue: #37d2d8;
-  --color-green: #d2de40;
-  --color-orange: #ffad64;
-  --color-red: #ef65a3;
+  --color-green: #a2de40;
+  --color-orange: #ffaa00;
+  --color-red: #ef6580;
 }
 
 * {
@@ -101,11 +101,11 @@ header {
 .note-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   width: max-content;
   margin: 2rem auto;
   padding: 1rem 2rem;
+  gap: 2rem;
 
   border: 1px solid gray;
   border-radius: 0.5rem;
@@ -117,7 +117,7 @@ header {
   font-family: system-ui, sans-serif;
 }
 
-.note-form .note-field {
+.note-field {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -126,12 +126,12 @@ header {
   text-align: center;
 }
 
-.note-form .note-field label {
+.note-field label {
   font-size: 2rem;
   font-weight: 700;
 }
 
-.note-form .note-field textarea {
+.note-field textarea {
   font-family: "Delicious Handrawn", cursive;
   font-size: 1.25rem;
   background-color: var(--color-yellow);
@@ -142,13 +142,60 @@ header {
   padding: 1rem;
 }
 
+.color-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.color-field input {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-yellow);
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.post.color-yellow,
+.color-field .color-yellow {
+  background-color: var(--color-yellow);
+}
+
+.post.color-blue,
+.color-field .color-blue {
+  background-color: var(--color-blue);
+}
+
+.post.color-green,
+.color-field .color-green {
+  background-color: var(--color-green);
+}
+
+.post.color-orange,
+.color-field .color-orange {
+  background-color: var(--color-orange);
+}
+
+.post.color-red,
+.color-field .color-red {
+  background-color: var(--color-red);
+}
+
+.color-field input:checked {
+  border: 3px solid rgba(0, 0, 0, 0.75);
+}
+
 .note-form button {
   cursor: pointer;
   border: 1px solid black;
   border-radius: 0.5rem;
-  margin-top: 2rem;
   padding: 0.5rem 1rem;
-  background-color: var(--color-blue);
+  background-color: var(--color-yellow);
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 500;

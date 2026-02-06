@@ -5,9 +5,9 @@ export function getNewPage(_req, res) {
 }
 
 export function postNewNote(req, res) {
-  const { note } = req.body;
+  const { note, color } = req.body;
 
-  posts.push({ note });
+  posts.push({ note, color });
 
   res.redirect("/");
 }
