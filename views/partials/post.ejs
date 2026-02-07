@@ -1,4 +1,10 @@
-<div class="post color-<%= post.color %>" style="font-size: <%= calculateFontSize(post.note) %>px">
+<div
+  class="post color-<%= post.color %>"
+  style="
+    font-size: <%= calculateFontSize(post.note) %>px;
+    transform: rotate(<%= post.rotation %>deg);
+  "
+>
   <% post.note.split("\n").map((line) => { %>
     <p class="line"><%= line %></p>
   <% }) %>

@@ -7,7 +7,11 @@ export function getNewPage(_req, res) {
 export function postNewNote(req, res) {
   const { note, color } = req.body;
 
-  posts.push({ note, color });
+  posts.push({
+    note,
+    color,
+    rotation: (Math.random() * 20 - 10).toFixed(2),
+  });
 
   res.redirect("/");
 }
