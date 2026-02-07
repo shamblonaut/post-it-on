@@ -1,8 +1,8 @@
 import express from "express";
 import path from "path";
 
+import { calculateFontSize } from "./public/js/utils.js";
 import indexRouter from "./routes/indexRoutes.js";
-import { calculateFontSize } from "./utils.js";
 
 const HOSTNAME = process.env.HOSTNAME || "0.0.0.0";
 const PORT = process.env.PORT || 3000;

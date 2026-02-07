@@ -1,13 +1,14 @@
 <form method="post" class="note-form">
+  <h2>New Note</h2>
   <div class="field note-field">
-    <label for="note">New Note</label>
-    <textarea
-      class="note-input"
-      name="note"
-      id="note"
+    <div
+      class="note-editor"
+      contenteditable
       autofocus
-      required
-    ></textarea>
+      role="textbox"
+      aria-multiline="true"
+    ><br /></div>
+    <textarea name="note" class="note-input" style="display: none;"></textarea>
   </div>
   <div class="field color-field">
     <label>Color: </label>
@@ -19,4 +20,4 @@
   </div>
   <button type="submit" class="note-submit">Add Note</button>
 </form>
-<script src="/js/form.js"></script>
+<script type="module" src="/js/form.js"></script>
