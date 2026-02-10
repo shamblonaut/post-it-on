@@ -13,7 +13,7 @@ export function postNewNote(req, res) {
     note,
     color,
     createdAt: new Date(),
-    rotation: (Math.random() * 20 - 10).toFixed(2),
+    rotation: (Math.random() * 10 - 5).toFixed(2),
   });
 
   res.redirect("/");
