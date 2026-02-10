@@ -4,7 +4,6 @@ import path from "path";
 import { calculateFontSize } from "./public/js/utils.js";
 import indexRouter from "./routes/indexRoutes.js";
 
-const HOSTNAME = process.env.HOSTNAME || "0.0.0.0";
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -22,10 +21,10 @@ app.use((_req, res, next) => {
 
 app.use("/", indexRouter);
 
-app.listen(PORT, HOSTNAME, (error) => {
+app.listen(PORT, (error) => {
   if (error) {
     throw error;
   }
 
-  console.log(`Listening on http://${HOSTNAME}:${PORT}`);
+  console.log(`Server listening on port ${PORT}`);
 });
