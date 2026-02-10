@@ -13,7 +13,9 @@
       <div class="board">
         <% if (posts.length > 0) { %>
           <% posts.map((post) => { %>
-            <%- include("partials/post", { post }) %>
+            <a href="/note/<%= post.id %>">
+              <%- include("partials/post", { post, rotate: true }) %>
+            </a>
           <% }) %>
         <% } else { %>
           <p class="empty-message">Add a note to get started!</p>

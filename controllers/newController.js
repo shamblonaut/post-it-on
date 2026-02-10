@@ -8,6 +8,7 @@ export function postNewNote(req, res) {
   const { note, color } = req.body;
 
   posts.push({
+    id: crypto.randomUUID(),
     note,
     color,
     rotation: (Math.random() * 20 - 10).toFixed(2),
