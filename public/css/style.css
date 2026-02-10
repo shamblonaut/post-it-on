@@ -110,7 +110,7 @@ header {
   width: max-content;
   margin: 2rem auto;
   padding: 1rem 2rem;
-  gap: 2rem;
+  gap: 1rem;
 
   border: 1px solid gray;
   border-radius: 0.5rem;
@@ -119,7 +119,7 @@ header {
     0 3px 6px rgba(0, 0, 0, 0.12),
     0 10px 20px rgba(0, 0, 0, 0.06);
 
-  font-family: system-ui, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .note-form h2 {
@@ -127,9 +127,14 @@ header {
   text-align: center;
 }
 
+.note-form label {
+  font-weight: 500;
+}
+
 .note-field {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -151,13 +156,22 @@ header {
   background-color: var(--color-yellow);
 }
 
+.author-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.author-field input {
+  padding: 0.25rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+}
+
 .color-field {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
 }
 
 .color-field input {
@@ -217,4 +231,33 @@ header {
   gap: 1rem;
   padding: 2rem;
   font-family: "Montserrat", sans-serif;
+}
+
+.note-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  width: 20rem;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+
+  border: 1px solid rgb(0, 0, 0, 0.25);
+  background-color: var(--color-blue);
+}
+
+.detail {
+  display: flex;
+  gap: 1rem;
+  text-align: left;
+}
+
+.detail-name {
+  font-weight: 500;
+  flex-basis: 36%;
+}
+
+.detail-value {
+  font-weight: 700;
 }

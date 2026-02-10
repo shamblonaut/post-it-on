@@ -12,6 +12,21 @@
     <main class="note-page">
       <h1>Post It Note</h1>
       <%- include("partials/post") %>
+      <div class="note-details">
+        <h2>Details</h2>
+        <div class="detail">
+          <p class="detail-name">Author:</p>
+          <p class="detail-value"><%= post.author %></p>
+        </div>
+        <div class="detail">
+          <p class="detail-name">Created At:</p>
+          <p class="detail-value">
+            <%= post.createdAt.toDateString() %>,
+            <br />
+            <%= post.createdAt.toLocaleTimeString() %>
+          </p>
+        </div>
+      </div>
     </main>
   </body>
 </html>

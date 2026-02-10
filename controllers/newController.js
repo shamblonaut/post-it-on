@@ -5,12 +5,14 @@ export function getNewPage(_req, res) {
 }
 
 export function postNewNote(req, res) {
-  const { note, color } = req.body;
+  const { author, note, color } = req.body;
 
   posts.push({
     id: crypto.randomUUID(),
+    author,
     note,
     color,
+    createdAt: new Date(),
     rotation: (Math.random() * 20 - 10).toFixed(2),
   });
 
