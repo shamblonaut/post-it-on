@@ -1,19 +1,17 @@
-import { posts } from "../db.js";
+import { createPost } from "../db/queries.js";
 
 export function getNewPage(_req, res) {
   res.render("new");
 }
 
-export function postNewNote(req, res) {
+export async function postNewNote(req, res) {
   const { author, note, color } = req.body;
 
-  posts.push({
-    id: crypto.randomUUID(),
+  await createPost({
     author,
     note,
-    color,
-    createdAt: new Date(),
-    rotation: (Math.random() * 10 - 5).toFixed(2),
+    color: color ?? "yellow",
+    rotation: Math.random() * 10 - 5,
   });
 
   res.redirect("/");

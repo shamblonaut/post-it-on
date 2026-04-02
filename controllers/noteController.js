@@ -1,7 +1,7 @@
-import { getPostById } from "../db.js";
+import { readPost } from "../db/queries.js";
 
-export function getNote(req, res) {
-  const post = getPostById(req.params.id);
+export async function getNote(req, res) {
+  const post = await readPost(req.params.id);
   if (!post) {
     res.sendStatus(404);
   }

@@ -1,5 +1,5 @@
-import { posts } from "../db.js";
+import { readAllPosts } from "../db/queries.js";
 
-export function getIndexPage(_req, res) {
-  res.render("index", { posts });
+export async function getIndexPage(_req, res) {
+  res.render("index", { posts: await readAllPosts() });
 }

@@ -21,9 +21,10 @@
         <div class="detail">
           <p class="detail-name">Created At:</p>
           <p class="detail-value">
-            <%= post.createdAt.toDateString() %>,
+            <% const createdAt = new Date(post.created_at); %>
+            <%= createdAt.toDateString() %>,
             <br />
-            <%= post.createdAt.toLocaleTimeString() %>
+            <%= createdAt.toLocaleTimeString() %>
           </p>
         </div>
       </div>
