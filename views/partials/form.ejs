@@ -23,5 +23,12 @@
     <input class="color-radio color-red" type="radio" name="color" value="red" autocomplete="off" />
   </div>
   <button type="submit" class="note-submit">Add Note</button>
+  <% if (locals.errors) { %>
+    <ul class="errors">
+      <% errors.forEach((error) => { %>
+        <li><%= error.msg %></li>
+      <% }); %>
+    </ul>
+  <% } %>
 </form>
 <script type="module" src="/js/form.js"></script>

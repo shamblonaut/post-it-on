@@ -107,7 +107,7 @@ header {
   display: flex;
   flex-direction: column;
 
-  width: max-content;
+  width: 320px;
   margin: 2rem auto;
   padding: 1rem 2rem;
   gap: 1rem;
@@ -221,6 +221,15 @@ header {
   background-color: var(--color-yellow);
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.errors {
+  padding: 8px;
+  padding-left: 24px;
+  border-radius: 8px;
+  border: 2px solid var(--color-red);
+  color: var(--color-red);
   font-weight: 500;
 }
 
